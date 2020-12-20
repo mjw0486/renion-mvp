@@ -1,4 +1,4 @@
-# Project Name #
+# Reunion #
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > A friends and family platform.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > This is a place for people to play games and talk as if they were in the same room.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > This app will allow video chat for users that are in close proximity to each other inside the GUI. It will emulate the natural flow of conversations that other video apps do not accomodate for.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Video chat apps only allow one person to talk at a time. If you want to talk, you have to say it to the whole group and conversations are not natural.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > This allows users to control avatars and 'walk' around the room. When they are near a person they want to talk to, they will be connected via video chat.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "Reunion connects friends and family in a more realistic and natural setting."
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Login. Create a room. Invite friends + family. Start chatting.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "Zoom calls have been horrible in the after-years. With reunion, I can catch up with my friends and family without everyone taking turns to monologue."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > www.reunion.com
