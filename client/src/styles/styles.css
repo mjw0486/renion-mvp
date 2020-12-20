@@ -1,3 +1,9 @@
 body{
 	background-color:lavender;
 }
+
+#video-grid {
+	width: 100px;
+	height: 100px;
+	border: solid black;
+}
