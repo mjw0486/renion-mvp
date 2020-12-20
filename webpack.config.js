@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-	target: 'node', 
+	target: 'web',
 	entry: './client/src/index.jsx',
 	output: {
 		filename: 'bundle.js',

@@ -8,28 +8,6 @@
 			<div id='app'>React Connects Here</div>
 			<ul id='events'></ul>
 			<script src='/socket.io/socket.io.js'></script>
-			<script>
-				const $events = document.getElementById('events');
-
-				const newItem = (content) => {
-					const item = document.createElement('li');
-					item.innerText = content;
-					return item;
-				};
-				const socket = io();
-
-				socket.on('connect', () => {
-					$events.appendChild(newItem('connected to the server'));
-				});
-				socket.on('hello', (counter) => {
-					$events.appendChild(newItem(`hello - ${counter}`));
-				});
-				let counter = 0;
-				setInterval(() => {
-					++counter;
-					socket.emit('hey', { counter });
-				}, 1000);
-			</script>
 			<script src='bundle.js'></script>
 		<body>
 	</html>
