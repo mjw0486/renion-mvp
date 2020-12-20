@@ -7,6 +7,12 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const { v4: uuidV4 } = require('uuid');
+const ejs = require('ejs');
+
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', 'ejs')
 
 io.on('connection', client => {
 	let counter = 0;
@@ -20,16 +26,11 @@ io.on('connection', client => {
 	client.on('join-room', (roomId, userId) => {
 		client.join(roomId);
 		client.to(roomId).broadcast.emit('user-connected', userId);
+		client.on('disconnect', () => {
+			client.to(roomId).broadcast.emit('user-disconnected', userId);
+		});
 	})
-	client.on('disconnect', () => {
-		client.to(roomId).broadcast.emit('user-disconnected', userId);
-	});
 });
-
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
 	res.redirect(`/${uuidV4()}`)
