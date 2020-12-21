@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -w",
     "start": "node server/server.js",
     "start:dev": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
