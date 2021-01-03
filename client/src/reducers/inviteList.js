@@ -6,7 +6,11 @@ import { useSelector, useDispatch } from 'react-redux';
 const inviteListReducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADDTOLIST':
-      return state.key = action.payload;
+      const key = action.payload.key;
+      const value = action.payload.value;
+      let newInvite = Object.assign({}, state);
+      newInvite[key] = value;
+      return newInvite;
     case 'SENDINVITES':
       return {};
     default:

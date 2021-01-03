@@ -6,6 +6,12 @@ import Login from './components/Login.jsx';
 import CreateRoom from './components/CreateRoom.jsx';
 import InviteUsers from './components/InviteUsers.jsx';
 import Room from './components/Room.jsx';
+import FloorPlan from './components/FloorPlan.jsx';
+import VideoGrid from './components/VideoGrid.jsx';
+import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Avatars from './components/Avatars.jsx';
+import Title from './components/Title.jsx';
+import LoginScreen from './components/LoginScreen.jsx';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -34,11 +40,11 @@ const App = () => {
 
 	// const counter = useSelector(state => state.counter);
 	const isLoggedIn = useSelector(state => state.isLoggedIn);
-	const inRoom = useSelector(state => state.inRoom);
-	const inviteSent = useSelector(state => state.inviteSent);
+	const avatars = useSelector(state => state.avatars);
 	return (
 		<React.Fragment>
-			{!isLoggedIn ? <Login /> : !inviteSent ? <InviteUsers /> : !inRoom ? <CreateRoom /> : <Room /> }
+			{isLoggedIn ? <React.Fragment><FloorPlan/> <Avatars /> <VideoGrid /> <Title /> </React.Fragment>:
+			<LoginScreen/>}
 		</React.Fragment>
 	);
 };

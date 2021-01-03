@@ -1,14 +1,333 @@
 body{
-	background-color:lavender;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 #video-grid {
+	margin: 0, auto;
+	width: 420px;
+	height: 100px;
+	left: 50%;
+	top: 40px;
+	position: absolute;
+}
+
+.video-container {
 	width: 100px;
 	height: 100px;
-	border: solid black;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
 }
 
 .video {
+	margin-top: -20px;
+	/* margin-left: -25px; */
+	padding: 0;
 	width: 150px;
 	height: 150px;
+}
+
+/* Login Form */
+#logo {
+	font-style: normal;
+	position: relative;
+	left: 15px;
+	top: -15px;
+}
+
+#subTitle {
+	font-weight: 400;
+	font-size: 1em;
+	position: relative;
+	left: 40px;
+	top: -40px;
+}
+
+#loginForm {
+	font-weight: 700;
+	font-family: 'Source Code Pro', monospace;
+	font-style: italic;
+	margin-left: -125px;
+	margin-top: -125px;
+	top: 50vh;
+	left: 50vw;
+	position: fixed;
+	border-style: solid;
+	border-width: 1px 1px 3px 1px;
+	border-color: rgba(1, 1, 1, .75);
+	background-color: white;
+	width: 250px;
+	min-height: 250px;
+	background-color:rgba(23, 25, 51, 0);
+}
+
+.submitButton {
+	width: 100%;
+	margin: 0;
+	border: solid 1px #ccc;
+	border-width: 1px 0 0 0;
+	padding: 0 8px;
+	position: absolute;
+	height: 41px;
+	bottom: 0px;
+	background-color: white;
+	font-family: 'Source Code Pro', monospace;
+	cursor: pointer;
+}
+.submitButton:hover {
+	color: red;
+}
+
+#screenNameContainer {
+	position: absolute;
+	bottom: 38px;
+	left: 0px;
+	width: 94%;
+}
+
+.input-container {
+	border: solid 1px white;
+	border-width: 1px 0 1px 0;
+	padding: 0 8px;
+	margin: 0;
+	position: relative;
+	background-color:rgba(23, 25, 51, 0.9);
+	color: white;
+}
+
+.input-container input  {
+	border: none;
+	font-size: 1em;
+	margin: 1em 0 .7em;
+	outline: 0;
+	background-color: rgba(1, 1, 1, 0);
+	width: 95%;
+	position: relative;
+	top: 5px;
+	color: white;
+}
+
+.input-container input::placeholder {
+	color: white;
+	/* opacity: 0; */
+}
+
+.input-container label {
+	font-size: 1em;
+	position: absolute;
+	transform-origin: top left;
+	transform: translate(0, 1em) scale(1);
+	transition: all .4s ease-in-out;
+}
+
+.input-container.active label {
+	transform: translate(0, 4px) scale(.75);
+}
+
+.hideUserPlaceholder {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+.showUserPlaceholder {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.hidePasswordPlaceholder {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+.showPasswordPlaceholder {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+/* Invite Form */
+
+#inviteForm {
+	font-weight: 700;
+	font-family: 'Source Code Pro', monospace;
+	font-style: italic;
+	margin-left: -125px;
+	margin-top: -125px;
+	top: 50vh;
+	left: 50vw;
+	position: fixed;
+	border-style: solid;
+	border-width: 1px 1px 3px 1px;
+	border-color: rgba(1, 1, 1, .75);
+	background-color: white;
+	width: 250px;
+	height: 250px;
+	background-color:rgba(23, 25, 51, 0);
+}
+
+.hideRoomNamePlaceholder {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+.showRoomNamePlaceholder {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.hideAddToListPlaceholder {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+.showAddToListPlaceholder {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.showButton {
+	background-color:rgba(1, 1, 1, 0);
+	color: white;
+	border-color: white;
+	cursor: pointer;
+	position: absolute;
+	left: 1.5px;
+	top: 2px;
+	height: 17px;
+	border-width: 1px;
+	text-align: center;
+	font-weight: 700;
+	font-size: .75em;
+	font-family: 'Source Code Pro', monospace;
+	font-style: italic;
+	background-color: white;
+	color: black;
+	border-color: white;
+}
+
+.showButton:hover {
+	color: red;
+	border-color: white;
+	background-color: white;
+}
+
+.hideButton {
+	display: none;
+}
+
+#inviteList {
+	width: 100%;
+	height: 40px;
+	top: 75px;
+	position: absolute;
+	overflow: auto;
+}
+
+#inviteHeader {
+	overflow: hidden;
+}
+
+
+
+/* Rooms */
+
+.room{
+	background-color: rgba(1, 1, 1, .5);
+	width: 50vw;
+	height: 50vh;
+}
+#room-0{
+	background-color:rgba(100, 200, 100, .5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#room-1{
+	background-color:rgba(150, 0 , 0, .5);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#room-2{
+	background-color:rgba(200, 0, 200, .5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#room-3{
+	background-color:purple;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* AVATAR */
+
+#svg {
+	position: absolute;
+	top: 80px;
+	left: 40%;
+}
+
+.avatarButtons {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+.avatarButtons:hover {
+	color: red;
+}
+.avatarButtons:focus {
+	color: red;
+}
+
+#decreaseAvatarButton {
+	position: absolute;
+	top: 15px;
+	left: -35px;
+}
+
+#increaseAvatarButton {
+	position: absolute;
+	top: 15px;
+	left: 70px;
+}
+
+/* Title Bar */
+
+#titleContainer {
+	font-weight: 700;
+	font-family: 'Source Code Pro', monospace;
+	font-style: italic;
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	left: 0;
+	background-color:rgba(23, 25, 51, 0.9);
+	color: white;
+	padding: 5px;
+	border:rgba(1, 1, 1, .5)
+}
+
+#roomTitle {
+	/* position:absolute; */
+	left: 0;
+}
+
+#membersTitle {
+	position: absolute;
+	left: 50vw;
+}
+
+.avatar {
+	position: absolute;
+	top: 100px;
+}
+
+.avatarScreenName {
+	font-weight: 700;
+	font-family: 'Source Code Pro', monospace;
+	font-style: italic;
+	position:absolute;
+	top: -15px;
 }
